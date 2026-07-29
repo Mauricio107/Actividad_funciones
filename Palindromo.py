@@ -1,0 +1,16 @@
+#Palindromo
+def es_palindromo(texto):
+    texto = texto.lower()
+    limpio = ""
+    for caracter in texto:
+        if caracter != " ":
+            limpio += caracter
+    return limpio, limpio == limpio[::-1]
+
+entrada = input("Ingrese una frase: ")
+cadena_limpia, resultado = es_palindromo(entrada)
+if resultado:
+    print("Es un palíndromo")
+else:
+    print("No es palíndromo")
+print("Longitud de la cadena limpia:", len(cadena_limpia))
